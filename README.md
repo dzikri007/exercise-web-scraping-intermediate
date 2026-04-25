@@ -3,22 +3,53 @@
 Repositori ini berisi latihan pengerjaan modul **Intermediate Web Scraping** (Python). Fokus utama dari proyek ini adalah melakukan ekstraksi data secara otomatis dari website e-commerce fiktif yang memiliki sistem paginasi (banyak halaman).
 
 ## 🚀 Fitur Utama
-- **Automated Pagination**: Mengambil data dari total 50 halaman secara otomatis.
-- **Detailed Extraction**: Mengekstrak judul buku, harga, ketersediaan stok, dan rating.
-- **Stealth Scraping**: Implementasi `User-Agent` untuk mensimulasikan permintaan dari browser asli agar terhindar dari pemblokiran.
-- **Data Structuring**: Hasil ekstraksi diproses untuk kebutuhan alur ETL (Extract, Transform, Load).
+
+* **Automated Pagination**: Mengambil data dari total 50 halaman secara otomatis.
+* **Detailed Extraction**: Mengekstrak judul buku, harga, ketersediaan stok, dan rating.
+* **Stealth Scraping**: Implementasi `User-Agent` untuk mensimulasikan permintaan dari browser asli agar terhindar dari pemblokiran.
+* **Data Structuring**: Hasil ekstraksi diproses untuk kebutuhan alur ETL (Extract, Transform, Load).
+* **Database Integration**: Menyimpan data ke PostgreSQL.
 
 ## 🛠️ Tech Stack
-- **Python** (Core Logic)
-- **BeautifulSoup4 / Scrapy** (HTML Parsing)
-- **Requests** (HTTP Library)
+
+* **Python** (Core Logic)
+* **BeautifulSoup4** (HTML Parsing)
+* **Requests** (HTTP Library)
+* **Pandas** (Data Processing)
+* **SQLAlchemy** (Database ORM)
+* **PostgreSQL** (Database)
 
 ## 📁 Struktur Dokumen
-- `basic_scraping.py`: Latihan dasar pengambilan elemen tunggal.
-- `intermediate_scraping.py`: Script utama untuk scraping 50 halaman sekaligus.
-- `requirements.txt`: Daftar library yang dibutuhkan.
+
+* `basic_scraping.py`: Latihan dasar pengambilan elemen tunggal.
+* `intermediate_scraping.py`: Script utama untuk scraping 50 halaman sekaligus.
+* `transform.py`: Modul untuk transformasi data (cleaning, konversi harga, dll).
+* `store_to_db.py`: Modul untuk menyimpan data ke database PostgreSQL.
+* `test.py`: File percobaan/debugging.
+* `requirements.txt`: Daftar library yang dibutuhkan.
 
 ## 📝 Cara Menjalankan
+
 1. Clone repositori ini:
+
    ```bash
-   git clone [https://github.com/dzikri007/exercise-web-scraping-intermediate.git](https://github.com/dzikri007/exercise-web-scraping-intermediate.git)
+   git clone https://github.com/dzikri007/exercise-web-scraping-intermediate.git
+   ```
+
+2. Masuk ke folder project:
+
+   ```bash
+   cd exercise-web-scraping-intermediate
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Jalankan program:
+
+   ```bash
+   python intermediate_scraping.py
+   ```
